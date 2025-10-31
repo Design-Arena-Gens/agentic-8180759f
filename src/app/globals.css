@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-zinc-50 text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-50;
+}
+
+a {
+  @apply text-inherit no-underline;
+}
+
+mark {
+  @apply rounded-md bg-amber-200/80 px-1 py-0.5 text-zinc-900;
+}
+
+.prose {
+  @apply mx-auto max-w-2xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300;
+}
+
+.prose h2 {
+  @apply mt-12 text-3xl font-semibold tracking-tight text-zinc-900 first:mt-0 dark:text-white;
+}
+
+.prose h3 {
+  @apply mt-10 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-white;
+}
+
+.prose p {
+  @apply mt-6;
+}
+
+.prose ul {
+  @apply mt-6 list-disc space-y-3 pl-5 text-zinc-600 dark:text-zinc-400;
+}
+
+.prose ol {
+  @apply mt-6 list-decimal space-y-3 pl-5 text-zinc-600 dark:text-zinc-400;
+}
+
+.prose li > strong {
+  @apply text-zinc-900 dark:text-zinc-100;
+}
+
+.prose blockquote {
+  @apply mt-6 border-l-4 border-amber-400/70 bg-amber-50/80 px-6 py-3 text-zinc-700 italic dark:border-amber-300/80 dark:bg-amber-400/10 dark:text-amber-100;
+}
+
+.prose code {
+  @apply rounded bg-zinc-200 px-1 py-0.5 text-sm text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100;
+}
+
+.prose pre {
+  @apply mt-6 overflow-x-auto rounded-2xl bg-zinc-900 p-6 text-sm text-zinc-100 shadow-lg dark:bg-zinc-800;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
